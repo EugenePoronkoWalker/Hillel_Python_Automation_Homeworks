@@ -24,7 +24,7 @@ print(alice_in_wonderland)
 Black_Sea = 436_402
 Azov_Sea = 37_800
 total_area = Black_Sea + Azov_Sea
-print(total_area, 'км2')
+print('Area of Black Sea and Azov Sea:', total_area, 'км2')
 
 # task 05
 """
