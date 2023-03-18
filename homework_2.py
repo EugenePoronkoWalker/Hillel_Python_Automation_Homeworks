@@ -41,7 +41,9 @@ quantity_in_first = total_quantity - second_and_third
 quantity_in_third = total_quantity - first_and_second
 quantity_in_second = total_quantity - (quantity_in_first + quantity_in_third)
 
-print("Quantity on the first storage:", quantity_in_first,"\n" "Quantity on the second storage:", quantity_in_second,"\n" "Quantity on the third storage:", quantity_in_third)
+print("Quantity on the first storage:", quantity_in_first,"\n"\
+    "Quantity on the second storage:", quantity_in_second,"\n"\
+    "Quantity on the third storage:", quantity_in_third)
 
 # task 06
 """
