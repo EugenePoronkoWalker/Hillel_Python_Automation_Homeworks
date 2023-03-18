@@ -72,7 +72,7 @@ print(int(kids_today))
 Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
 """
 first_book = 8
-second_book = 8 * 2
+second_book = 8 + 2
 third_book = (first_book + second_book) / 2
 all_books = first_book + second_book + third_book
 print(all_books)
