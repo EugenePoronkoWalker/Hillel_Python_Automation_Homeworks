@@ -8,10 +8,6 @@ alice_in_wonderland = """Would you tell me, please, which way I ought to go from
     "Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."""
 
 
-"""for symbol in alice_in_wonderland:
-    if symbol == "'":
-        print(symbol)"""
-
 # task 03 == Виведіть змінну alice_in_wonderland на друк
 print(alice_in_wonderland)
 
