@@ -17,9 +17,9 @@ print(alice_in_wonderland)
 моря становить 37 800 км2. Яку площу займають Чорне та Азов-
 ське моря разом?
 """
-area_of_black_Sea = 436_402
-area_of_azov_Sea = 37_800
-total_area = area_of_azov_Sea + area_of_black_Sea
+area_of_black_sea = 436_402
+area_of_azov_sea = 37_800
+total_area = area_of_azov_sea + area_of_black_sea
 print('Area of Black Sea and Azov Sea:', total_area, 'км2')
 
 # task 05
