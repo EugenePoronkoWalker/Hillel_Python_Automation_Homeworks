@@ -2,15 +2,15 @@
 # task 02 == Знайдіть та екрануйте всі символи одинарної дужки у тексті
 alice_in_wonderland = """Would you tell me, please, which way I ought to go from here?"\n
     "That depends a good deal on where you want to get to," said the Cat.\n
-    "I don't much care where ——" said Alice.\n
-    "Then it doesn't matter which way you go," said the Cat.\n
+    "I don\'t much care where ——" said Alice.\n
+    "Then it doesn\'t matter which way you go," said the Cat.\n
     "—— so long as I get somewhere," Alice added as an explanation.\n
-    "Oh, you're sure to do that," said the Cat, "if you only walk long enough."""
+    "Oh, you\'re sure to do that," said the Cat, "if you only walk long enough."""
 
 
-for symbol in alice_in_wonderland:
+"""for symbol in alice_in_wonderland:
     if symbol == "'":
-        print(symbol)
+        print(symbol)"""
 
 # task 03 == Виведіть змінну alice_in_wonderland на друк
 print(alice_in_wonderland)
@@ -21,9 +21,9 @@ print(alice_in_wonderland)
 моря становить 37 800 км2. Яку площу займають Чорне та Азов-
 ське моря разом?
 """
-Black_Sea = 436_402
-Azov_Sea = 37_800
-total_area = Black_Sea + Azov_Sea
+area_of_black_Sea = 436_402
+area_of_azov_Sea = 37_800
+total_area = area_of_azov_Sea + area_of_black_Sea
 print('Area of Black Sea and Azov Sea:', total_area, 'км2')
 
 # task 05
@@ -72,7 +72,8 @@ d = 7248 % 6
 e = 7128 % 5
 f = 19224 % 9
 
-print(a, b, c, d, e, f)
+print("Remainder of the division of numbers:", "\n", "a)", a,"\n","b)", b, "\n",\
+    "c)", c, "\n","d)", d, "\n","e)", e, "\n","f)", f)
 
 # task 08
 """
@@ -132,5 +133,5 @@ print("Total amount of petrol for trip:", amount_petrol_for_trip)
 #2) Скільки щонайменше разів родині необхідно заїхати на зап-
 #равку під час цієї подорожі, кожного разу заправляючи повний бак?
 
-Amount_times_to_gas_station = int(amount_petrol_for_trip / full_tank)
-print("Total amount of filling tank:", Amount_times_to_gas_station)
+amount_times_to_gas_station = int(amount_petrol_for_trip / full_tank)
+print("Total amount of filling tank:", amount_times_to_gas_station)
