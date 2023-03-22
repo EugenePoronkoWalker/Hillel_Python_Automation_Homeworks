@@ -33,17 +33,25 @@ adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("....", " ")
 """
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
 adwentures_of_tom_sawer = " ".join(adwentures_of_tom_sawer)
-print(adwentures_of_tom_sawer)
+
 
 # task 04
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
+amount_of_letter_h = 0
+for symbol in adwentures_of_tom_sawer:
+    if symbol == "h":
+        amount_of_letter_h += 1
+print(amount_of_letter_h)
 
 
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
-
+amount_of_uppercase_letter = 0
+adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
+for symbol in adwentures_of_tom_sawer:
+    if symbol == symbol.
 
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
