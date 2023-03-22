@@ -48,10 +48,13 @@ print(amount_of_letter_h)
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
-amount_of_uppercase_letter = 0
+amount_of_uppercase_letters = 0
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
 for symbol in adwentures_of_tom_sawer:
-    if symbol == symbol.
+    if symbol == symbol.title():
+        amount_of_uppercase_letters += 1
+print(amount_of_uppercase_letters)
+
 
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
