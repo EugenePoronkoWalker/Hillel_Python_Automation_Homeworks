@@ -59,19 +59,23 @@ print(amount_of_uppercase_letters)
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
+adwentures_of_tom_sawer = " ".join(adwentures_of_tom_sawer)
+first_place_Tom_word_in_text = adwentures_of_tom_sawer.find("Tom")
+print(adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
 
 
 # task 07
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = None
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
+
 
 # task 08
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
-
+print(adwentures_of_tom_sawer_sentences[3])
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
