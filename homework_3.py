@@ -34,7 +34,6 @@ adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("....", " ")
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
 adwentures_of_tom_sawer = " ".join(adwentures_of_tom_sawer)
 
-
 # task 04
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
@@ -49,8 +48,8 @@ print(amount_of_letter_h)
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
 amount_of_uppercase_letters = 0
-adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
-for symbol in adwentures_of_tom_sawer:
+new_list_adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
+for symbol in new_list_adwentures_of_tom_sawer:
     if symbol == symbol.title():
         amount_of_uppercase_letters += 1
 print(amount_of_uppercase_letters)
@@ -59,7 +58,6 @@ print(amount_of_uppercase_letters)
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
-adwentures_of_tom_sawer = " ".join(adwentures_of_tom_sawer)
 first_place_Tom_word_in_text = adwentures_of_tom_sawer.find("Tom")
 print(adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
 
@@ -69,6 +67,8 @@ print(adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
 adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
+print(adwentures_of_tom_sawer_sentences)
+
 
 
 # task 08
@@ -76,6 +76,8 @@ adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
 Перетворіть рядок у нижній регістр.
 """
 print(adwentures_of_tom_sawer_sentences[3])
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer_sentences[3].lower()
+
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
