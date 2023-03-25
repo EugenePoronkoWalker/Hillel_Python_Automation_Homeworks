@@ -82,6 +82,12 @@ adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer_sentences[3].lower()
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
 """
+adwentures_of_tom_sawer = adwentures_of_tom_sawer.split(".")
+counter = 0
+for words in adwentures_of_tom_sawer:
+    if words.startswith("By the time") == True:
+        counter += 1
+print("How many sentences starts with words 'By the time':", counter)
 
 
 # task 10
