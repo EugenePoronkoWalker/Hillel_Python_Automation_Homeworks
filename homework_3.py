@@ -41,8 +41,7 @@ amount_of_letter_h = 0
 for symbol in adwentures_of_tom_sawer:
     if symbol == "h":
         amount_of_letter_h += 1
-print(amount_of_letter_h)
-
+print("How many letters 'h' :", amount_of_letter_h)
 
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
@@ -52,14 +51,14 @@ new_list_adwentures_of_tom_sawer = adwentures_of_tom_sawer.split()
 for symbol in new_list_adwentures_of_tom_sawer:
     if symbol == symbol.title():
         amount_of_uppercase_letters += 1
-print(amount_of_uppercase_letters)
+print("How many words with capital letters:", amount_of_uppercase_letters)
 
 
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
 first_place_Tom_word_in_text = adwentures_of_tom_sawer.find("Tom")
-print(adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
+print("Position on which 'Tom' is the second time:", adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
 
 
 # task 07
@@ -72,7 +71,7 @@ adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(". ")
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
-print(adwentures_of_tom_sawer_sentences[3].lower())
+print("Fourth sentence in lower case:", adwentures_of_tom_sawer_sentences[3].lower())
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
@@ -87,4 +86,4 @@ print("How many sentences starts with words 'By the time':", counter)
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-print(len(adwentures_of_tom_sawer_sentences[-1].split()))
+print("How many words in the last sentence:", len(adwentures_of_tom_sawer_sentences[-1].split()))
