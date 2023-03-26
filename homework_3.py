@@ -66,25 +66,19 @@ print(adwentures_of_tom_sawer.find("Tom", first_place_Tom_word_in_text + 1))
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
-print(adwentures_of_tom_sawer_sentences)
-
-
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(". ")
 
 # task 08
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
-print(adwentures_of_tom_sawer_sentences[3])
-adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer_sentences[3].lower()
-
+print(adwentures_of_tom_sawer_sentences[3].lower())
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
 """
-adwentures_of_tom_sawer = adwentures_of_tom_sawer.split(".")
 counter = 0
-for words in adwentures_of_tom_sawer:
+for words in adwentures_of_tom_sawer_sentences:
     if words.startswith("By the time") == True:
         counter += 1
 print("How many sentences starts with words 'By the time':", counter)
@@ -93,3 +87,4 @@ print("How many sentences starts with words 'By the time':", counter)
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
+print(len(adwentures_of_tom_sawer_sentences[-1].split()))
