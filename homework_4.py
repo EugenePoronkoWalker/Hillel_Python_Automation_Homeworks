@@ -3,7 +3,7 @@ big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
 # task 1. Знайдіть всі унікальні елементи в списку small_list
 
 new_list = set(small_list)
-print("All unique elements in 'smail_list' list:", new_list)
+print("All unique elements from 'smail_list' :", new_list)
 
 # task 2. Знайдіть середнє арифметичне всіх елементів у списку small_list
 
