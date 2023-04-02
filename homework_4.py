@@ -5,9 +5,7 @@ big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
 new_list = []
 
 for char in small_list:
-    if char in new_list:
-        continue
-    else:
+    if char not in new_list:
         new_list.append(char)
 print("New list with all unique elements in 'smail_list' list:", new_list)
 
@@ -55,12 +53,16 @@ print("The new dictionary with swapped key and value:", new_base_dict)
 
 # task 6. Об'єднайте два словника base_dict та add_dict  в новий словник sum_dict
 # Якщо ключі збігаються, то об'єднайте (str) або додайте їх значення (int)
+
 sum_dict = {}
 sum_dict.update(base_dict)
 
 for key, value in add_dict.items():
     if key in sum_dict:
-        value += int(sum_dict[key])
+        if (type(value)==int) and (type(sum_dict[key])==int):
+            value += int(sum_dict[key])
+        else:
+            value = str(sum_dict[key]) + str(value)
     sum_dict.update({key:value})
 print("Dictionary with merged two dictionaries and sum of values of the matching key:", sum_dict)
 
@@ -76,6 +78,7 @@ set_1 = {1, 2, 3, 4, 5}
 set_2 = {4, 6, 5, 10}
 
 new_set = set_1 ^ set_2
+
 counter = 0
 for i in new_set:
     counter += i
@@ -86,8 +89,12 @@ print("The amount of elements from two lists that are not common:", counter)
 # Наприклад, якщо перший список містить [1, 2, 3, 4], а другий
 # список містить [3, 4, 5, 6], то повернутий сет містить [1, 2, 5, 6]
 
-first_list = [1, 2, 5, 6, 7, 10, 12 , 15]
+first_list = [1, 2, 5, 6, 7, 10, 12, 15]
 second_list = [3, 5, 12, -3, 10, 4, 13]
+#first option
+from_list_to_set = set(second_list) ^ set(first_list)
+print("The set with unique elements from two lists:", from_list_to_set)
+#second option
 correct_list = []
 for i in first_list:
     if i in second_list:
@@ -95,7 +102,7 @@ for i in first_list:
     else:
         correct_list.append(i)
 correct_set = set(correct_list)
-print("The set with unique elements from two lists:" ,correct_set)
+print("The set with unique elements from two lists:", correct_set)
 
 
 person_list = [('Boby', 19), ('Alice', 25) , ('Charlie', 32),
