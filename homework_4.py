@@ -2,32 +2,21 @@ small_list = [3, 1, 4, 5, 2, 5, 3]
 big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
 # task 1. Знайдіть всі унікальні елементи в списку small_list
 
-new_list = []
-
-for char in small_list:
-    if char not in new_list:
-        new_list.append(char)
-print("New list with all unique elements in 'smail_list' list:", new_list)
+new_list = set(small_list)
+print("All unique elements in 'smail_list' list:", new_list)
 
 # task 2. Знайдіть середнє арифметичне всіх елементів у списку small_list
 
 amount_of_elements = len(small_list)
-sum_elements = 0
-for i in small_list:
-    sum_elements += i
-
+sum_elements = sum(small_list)
 average_arithmetic = sum_elements / amount_of_elements
 print("The average arithmetic of all items in the 'small_list' list", average_arithmetic)
 
 
 # task 3. Перевірте, чи є в списку big_list дублікати
-new_big_list = []
-counter = 0
-for i in big_list:
-    if big_list.count(i) > 1:
-        if i not in new_big_list:
-            new_big_list.append(i)
-print("Dublicate in the 'big_list' list:", new_big_list)
+
+new_big_list = set(big_list)
+print(len(new_big_list) == len(big_list))
 
 
 base_dict = {'contry':'Ukraine', 'continent': 'Europe', 'size': 123}
@@ -59,13 +48,9 @@ sum_dict.update(base_dict)
 
 for key, value in add_dict.items():
     if key in sum_dict:
-        if (type(value)==int) and (type(sum_dict[key])==int):
-            value += int(sum_dict[key])
-        else:
-            value = str(sum_dict[key]) + str(value)
+        value += sum_dict[key]
     sum_dict.update({key:value})
 print("Dictionary with merged two dictionaries and sum of values of the matching key:", sum_dict)
-
 
 # task 7.
 line = "Створіть множину всіх символів, які входять у заданий рядок"
@@ -79,10 +64,10 @@ set_2 = {4, 6, 5, 10}
 
 new_set = set_1 ^ set_2
 
-counter = 0
+total_sum = 0
 for i in new_set:
-    counter += i
-print("The amount of elements from two lists that are not common:", counter)
+    total_sum += i
+print("The total sum of elements from two lists that are not common:", total_sum)
 
 # task 9. Створіть два списки та обробіть їх так, щоб отримати сет, який
 # містить всі елементи з обох списків,  які зустрічаються тільки один раз.
@@ -91,18 +76,9 @@ print("The amount of elements from two lists that are not common:", counter)
 
 first_list = [1, 2, 5, 6, 7, 10, 12, 15]
 second_list = [3, 5, 12, -3, 10, 4, 13]
-#first option
+
 from_list_to_set = set(second_list) ^ set(first_list)
 print("The set with unique elements from two lists:", from_list_to_set)
-#second option
-correct_list = []
-for i in first_list:
-    if i in second_list:
-        continue
-    else:
-        correct_list.append(i)
-correct_set = set(correct_list)
-print("The set with unique elements from two lists:", correct_set)
 
 
 person_list = [('Boby', 19), ('Alice', 25) , ('Charlie', 32),
@@ -113,14 +89,14 @@ person_list = [('Boby', 19), ('Alice', 25) , ('Charlie', 32),
 # Приклад виводу:
 # {'10-19': ['A'], '20-29': ['B', 'C', 'D'], '30-39': ['E'], '40-49': ['F']}
 
-person_dict = {}
+person_dict = {'10-19': [], '20-29': [], '30-39': [], '40-49': []}
 for k, v in person_list:
     if v >= 10 and v <= 19:
-        person_dict['10-19'] = person_dict.get('10-19', []) + [k]
+        person_dict['10-19'].append(k)
     elif v >= 20 and v <= 29:
-        person_dict['20-29'] = person_dict.get('20-29', []) + [k]
+        person_dict['20-29'].append(k)
     elif v >= 30 and v <= 39:
-        person_dict['30-39'] = person_dict.get('30-39', []) + [k]
+        person_dict['30-39'].append(k)
     elif v >= 40 and v <= 49:
-        person_dict['40-49'] = person_dict.get('40-49', []) + [k]
+        person_dict['40-49'].append(k)
 print("The new sorted dictionary:", person_dict)
