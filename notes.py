@@ -1,25 +1,27 @@
-base_dict = {'contry':'Ukraine', 'continent': 'Europe', 'size': 123}
-add_dict = {"a":1, "b":2, "c":2, "d":3, 'size': 12}
-
-# task 6. Об'єднайте два словника base_dict та add_dict  в новий словник sum_dict
-# Якщо ключі збігаються, то об'єднайте (str) або додайте їх значення (int)
-
-sum_dict = {}
-sum_dict.update(base_dict)
-
-for key, value in add_dict.items():
-    if key in sum_dict:
-        value += sum_dict[key]
-    sum_dict.update({key:value})
-print("Dictionary with merged two dictionaries and sum of values of the matching key:", sum_dict)
+# task 8
+"""  З використанням циклу for реалізуйте гру "Вгадай число".
+Початок програми написаний, гравець має 5 спроб відгадати випадкове число від 1 до 20,
+яке було згенеровано за допомогою функції randint() модуля random.
+У кожній спробі гравець вводить своє припущення, після чого програма повідомляє, чи
+було припущення занадто великим або занадто малим, чи гравець вгадав число.
+"""
+import random
+secret_number = random.randint(1, 20)
+guesses = 0
+max_guesses = 5
+print("Вгадайте число від 1 до 20 за 5 спроб!")
 
 
-###################################
-for key, value in add_dict.items():
-    if key in sum_dict:
-        if (type(value)==int) and (type(sum_dict[key])==int):
-            value += int(sum_dict[key])
-        else:
-            value = str(sum_dict[key]) + str(value)
-    sum_dict.update({key:value})
-print("Dictionary with merged two dictionaries and sum of values of the matching key:", sum_dict)
+for i in range (1, (max_guesses + 1)):
+    guess = int(input("Enter a number: "))
+    guesses += 1
+    if guess < secret_number:
+        print("Your number is lower than mine!")
+    elif guess > secret_number:
+        print("Your number is bigger than mine!")
+    else:
+        break
+if guess == secret_number:
+    print("Yes, You are right, this is my number!")
+else:
+    print("I'm sorry but you didn't guess!")
