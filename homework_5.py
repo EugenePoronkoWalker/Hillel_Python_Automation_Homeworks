@@ -94,7 +94,7 @@ max_guesses = 5
 print("Вгадайте число від 1 до 20 за 5 спроб!")
 
 
-for i in range (1, (max_guesses + 1)):
+for i in range (0, max_guesses):
     guess = int(input("Enter a number: "))
     guesses += 1
     if guess < secret_number:
@@ -114,10 +114,15 @@ else:
 """
 fruits = ["apple", "banana", "orange", "grape", "mango"]
 
+for i in fruits:
+    if i == "orange":
+        continue
+    print(i, end=' ')
+
 # task 10
 """  Задано список чисел numbers, потрібно знайти список квадратів
 парних чисел зі списку. Спробуйте використати if та цикл for в один рядок.
 """
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-result = ["Відповідь вставте сюди"]
-print(result)  #  [4, 16, 36, 64, 100]
+result = [i ** 2 for i in numbers if i % 2 == 0 ]
+print("The list of squares of even numbers from a list:", result)
