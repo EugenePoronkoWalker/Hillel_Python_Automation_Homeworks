@@ -31,20 +31,17 @@ multiplication_table(3)
 """  Написати функцію, яка обчислює суму двох чисел.
 """
 def sum_numbers(first, second):
-    print("The total sum of a and b:", first + second)
+    return first + second
 
-sum_numbers(4, 5)
+a = 10
+b = 13
+print("The total sum of a and b:", sum_numbers(a, b))
 
 # task 3
-"""  Написати функцію, яка розрахує середнє арифметичне списку чисел.
-"""
+"""  Написати функцію, яка розрахує середнє арифметичне списку чисел."""
+
 def arithmetic_average(list_numbers):
-    counter = 0
-    sum_of_number = 0
-    for i in list_numbers:
-        counter += 1
-        sum_of_number += i
-    return sum_of_number / counter
+    return sum(list_numbers) / len(list_numbers)
 
 list_numbers = [1, 2, 3, 4]
 print("The arithmetic average for list of numbers:", arithmetic_average(list_numbers))
@@ -57,7 +54,6 @@ def reverse_line(line):
 
 line = "Hello!!!!"
 print("The line in reverse order:", reverse_line(line))
-
 
 # task 5
 """  Написати функцію, яка приймає список слів та повертає найдовше слово у списку.
@@ -93,3 +89,43 @@ print(find_substring(str1, str2)) # поверне -1
 перетворіть їх у 4 функції, що отримують значення та повертають результат.
 Обоязково документуйте функції та дайте зрозумілі імена змінним.
 """
+#1. Знайдіть і поверніть всі унікальні елементи в списку
+
+def find_unique_elements_in_list(list):
+    new_list = set(list)
+    return new_list
+
+elements = [3, 1, 4, 5, 2, 5, 10]
+print("All unique elements from list :", find_unique_elements_in_list(elements))
+
+#2. Перевірте, чи є в списку дублікати
+
+def check_dublicates_in_list(list):
+    new_big_list = set(list)
+    return len(new_big_list) == len(big_list)
+
+big_list = [3, 5, -2, -1, -3, 0, 1, 4, 5, 2]
+print("Do we have dublicated in the list?:", check_dublicates_in_list(big_list))
+
+
+#3. Обчисліть суму елементів двох множин, які не є спільними
+def sum_elements_not_common_sets(first_set, second_set):
+    new_set = first_set ^ second_set
+    total_sum = 0
+    for i in new_set:
+        total_sum += i
+    return total_sum
+
+set_1 = {1, 2, 3, 4, 5}
+set_2 = {4, 6, 5, 10}
+
+print("The total sum of elements from two lists that are not common:", sum_elements_not_common_sets(set_1, set_2))
+
+
+#4. Потрібно знайти список квадратів парних чисел зі списку.
+def find_squares_of_paired_numbers(list_elements):
+    result = [i ** 2 for i in list_elements if i % 2 == 0 ]
+    return result
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("The list of squares of even numbers from a list:", find_squares_of_paired_numbers(numbers))
