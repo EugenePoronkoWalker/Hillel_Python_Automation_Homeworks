@@ -35,7 +35,7 @@ def sum_numbers(first, second):
 
 a = 10
 b = 13
-print("The total sum of a and b:", sum_numbers(a, b))
+print("The total sum of two numbers:", sum_numbers(a, b))
 
 # task 3
 """  Написати функцію, яка розрахує середнє арифметичне списку чисел."""
